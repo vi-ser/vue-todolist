@@ -4,8 +4,28 @@
     cursor: pointer;
 }
 
+.task .fa-square-check:hover {
+    scale: 1.1;
+}
+
 .task .fa-square {
     font-size: 1.2em;
 
     cursor: pointer;
+}
+
+.task .fa-square:hover {
+    scale: 1.1;
+}
+
+.task .fa-circle-xmark {
+    font-size: 1.2em;
+
+    cursor: pointer;
+    color: grey;
+}
+
+.task .fa-circle-xmark:hover {
+    scale: 1.1;
+    color: black;
 }
