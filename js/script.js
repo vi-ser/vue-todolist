@@ -87,7 +87,7 @@ createApp({
         deleteTask(taskIndex) {
             // elimino dall'array tasks l'elemento che corrisponde all'indice riportato nel parametro
 
-            this.tasks.splice(taskIndex, 1);
+            this.todoList.splice(taskIndex, 1);
 
         },
 

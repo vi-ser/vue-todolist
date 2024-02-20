@@ -42,7 +42,7 @@
                     </span>
 
                     <div class="d-flex gap-4">
-                        <i class="fa-solid fa-circle-xmark"></i>
+                        <i @click="deleteTask(index)" class="fa-solid fa-circle-xmark"></i>
 
                         <i class="fa-regular text-decoration-none"
                             :class=" currentTask.done == true ? 'fa-square-check' :  'fa-square'"></i>
