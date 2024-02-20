@@ -19,3 +19,90 @@ Bonus:
 2 - cliccando sul testo dell'item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 Buon lavoro e buon divertimento!
 */
+
+const { createApp } = Vue;
+
+createApp({
+    data() {
+        return {
+
+            newTask: '',
+
+            todoList: [
+                {
+                    text: "Fare la spesa",
+                    done: false
+                },
+                {
+                    text: "Studiare Vue.js",
+                    done: false
+                },
+
+                {
+                    text: "Fare l'esercizio di matematica",
+                    done: true
+                },
+
+                {
+                    text: "Pulire la casa",
+                    done: false
+                },
+
+                {
+                    text: "Chiamare mamma",
+                    done: true
+                },
+
+                {
+                    text: "Andare in palestra",
+                    done: false
+                },
+
+                {
+                    text: "Scrivere report per lavoro",
+                    done: false
+                },
+
+                {
+                    text: "Leggere un libro",
+                    done: true
+                },
+
+                {
+                    text: "Preparare la cena",
+                    done: false
+                },
+
+                {
+                    text: "Pianificare il viaggio",
+                    done: false
+                }
+            ],
+
+        }
+    },
+
+    methods: {
+
+        deleteTask(taskIndex) {
+            // elimino dall'array tasks l'elemento che corrisponde all'indice riportato nel parametro
+
+            this.tasks.splice(taskIndex, 1);
+
+        },
+
+        addTask() {
+
+            // aggiungo il testo scritto dentro il campo di input alla lista dei task
+            // testo del campo di input:
+            // console.log(this.newTask)
+
+            this.tasks.push(this.newTask)
+
+            // cancello il contenuto del campo di input
+            this.newTask = "";
+
+        },
+    },
+
+}).mount("#app");
