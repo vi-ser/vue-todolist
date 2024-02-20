@@ -2,6 +2,7 @@
     font-size: 1.2em;
 
     cursor: pointer;
+    color: #0C6DFD;
 }
 
 .task .fa-square-check:hover {
@@ -12,6 +13,7 @@
     font-size: 1.2em;
 
     cursor: pointer;
+    color: #0C6DFD;
 }
 
 .task .fa-square:hover {

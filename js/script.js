@@ -26,7 +26,7 @@ createApp({
     data() {
         return {
 
-            newTask: '',
+            newTask: "",
 
             todoList: [
                 {
@@ -85,7 +85,7 @@ createApp({
     methods: {
 
         deleteTask(taskIndex) {
-            // elimino dall'array tasks l'elemento che corrisponde all'indice riportato nel parametro
+            // elimino dall'array todoList l'elemento che corrisponde all'indice riportato nel parametro
 
             this.todoList.splice(taskIndex, 1);
 
@@ -93,14 +93,15 @@ createApp({
 
         addTask() {
 
-            // aggiungo il testo scritto dentro il campo di input alla lista dei task
-            // testo del campo di input:
-            // console.log(this.newTask)
 
-            this.tasks.push(this.newTask)
+            // creo un nuovo oggetto per il nuovo task
+            const newTask = { text: this.newTask, done: false };
 
-            // cancello il contenuto del campo di input
-            this.newTask = "";
+            // aggiungo il nuovo oggetto all'array todoList
+            this.todoList.push(newTask);
+
+            // resetto il campo per inserire nuovi task
+            this.newTask = '';
 
         },
     },
