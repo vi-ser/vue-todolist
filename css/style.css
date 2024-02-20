@@ -1,5 +1,11 @@
 .task .fa-square-check {
-    font-size: 1.8em;
+    font-size: 1.2em;
+
+    cursor: pointer;
+}
+
+.task .fa-square {
+    font-size: 1.2em;
 
     cursor: pointer;
 }

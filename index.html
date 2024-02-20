@@ -31,30 +31,18 @@
         </h1>
 
         <div id="tasks-container" class="mb-5">
-            <!--
-                   operatori ternari:
-                   scrivere un if() in una sola riga
-                   in questo modo possiamo fare dei controlli e scrivere dei dati anche negli
-                   attributi dei nostri elementi html direttamente da qui
-           
-               -->
-            <ul v-if="tasks.length > 0" class="list-group" style="border: solid 6px transparent;" :style="
-                       {
-                           borderColor: tasks.length > 4 ? 'red' : 'transparent',
-                           borderWidth: tasks.length + 'px',
-                       }
-                   ">
 
-                <li v-for="(currentTask, index) in tasks"
-                    class="task list-group-item d-flex justify-content-between align-items-center">
-                    {{ currentTask }}
-                    <i @click="deleteTask(index)" class="fa-regular fa-square-check"></i>
+            <ul class="list-group">
+
+                <li v-for="(currentTask, index) in todoList"
+                    class="task list-group-item d-flex justify-content-between align-items-center"
+                    :class=" currentTask.done == true ? 'text-decoration-line-through' : '' ">
+
+                    {{ currentTask.text }}
+                    <i class="fa-regular" :class=" currentTask.done == true ? 'fa-square-check' :  'fa-square'"></i>
                 </li>
             </ul>
 
-            <div v-else class="bg-success p-3 text-white rounded-2 ">
-                Hai completato i task per oggi ☀️
-            </div>
 
         </div>
 
